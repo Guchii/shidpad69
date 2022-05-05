@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Howl } from "howler";
-  import { globalVolume } from "../stores/volume";
+  import { globalVolume } from "../../stores/volume";
 
   export let pad;
 
