@@ -40,7 +40,7 @@
   <main class="bg-red-50 flex-1">
     <div class="wrapper">
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-2">
-        {#each info as pad, i}
+        {#each info as pad}
           <Pad {pad} />
         {/each}
       </div>
