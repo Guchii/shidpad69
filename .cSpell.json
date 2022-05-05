@@ -11,6 +11,7 @@
         "Fornide",
         "pnpm",
         "Shid",
+        "sveltejs",
         "vite"
     ],
     // flagWords - list of words to be always considered incorrect
