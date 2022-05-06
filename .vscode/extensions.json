@@ -2,6 +2,7 @@
     "recommendations": [
         "svelte.svelte-vscode",
         "rbbit.typescript-hero",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss"
     ]
 }
