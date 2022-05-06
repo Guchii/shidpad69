@@ -1,8 +1,9 @@
 <script lang="ts">
   import { Howl } from "howler";
   import { currentlyPlayingAudio } from "../../stores/audio";
+  import type { TPad } from "../audio-sources";
 
-  export let pad: { id: number; loc: string; name: string; oneShot: boolean };
+  export let pad: TPad;
 
   const sound = new Howl({
     src: [pad.loc],
@@ -12,7 +13,8 @@
 
 <div
   on:click={() => {
-    if (!$currentlyPlayingAudio.includes(pad.id) || pad.oneShot) {
+    if (pad.oneShot) sound.play();
+    else if (!$currentlyPlayingAudio.includes(pad.id)) {
       $currentlyPlayingAudio = [...$currentlyPlayingAudio, pad.id];
       sound.play();
       sound.on("end", () => {
