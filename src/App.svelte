@@ -1,7 +1,7 @@
 <script lang="ts">
   import Footer from "./Footer.svelte";
   import Header from "./Header.svelte";
-  import audios from "./lib/audio.json";
+  import { audios } from "./lib/audio-sources";
   import Pad from "./lib/components/Pad.svelte";
 </script>
 
