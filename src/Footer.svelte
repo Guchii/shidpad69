@@ -1,8 +1,7 @@
-<div class="bg-blue-50 pb-8">
+<div class="text-white py-4">
   <div class="wrapper">
-    <div class="text-xl text-center">
-      Made with <div class="uppercase font-bold text-red-600 inline">Love</div>
-      by Guchii
+    <div class="flex flex-col justify-center text-xl text-center">
+      Made with Love by Team ShidPad
     </div>
   </div>
 </div>
