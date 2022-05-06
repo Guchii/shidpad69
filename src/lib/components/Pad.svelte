@@ -12,9 +12,9 @@
   $: sound.volume($globalVolume / 100);
 </script>
 
-<div
+<button
   on:click={() => sound.play()}
-  class="duration-200 h-48 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-black rounded-md active:shadow-xl hover:shadow-xl hover:z-10 shadow-red-500 grid place-items-center uppercase cursor-pointer"
+  class="transition-all h-48 bg-gradient-to-r from-rose-madder to-yellow-orange  text-white font-black rounded-md active:shadow-xl active:translate-y-1 active:scale-95 hover:shadow-xl hover:z-10 shadow-red-500 grid place-items-center uppercase cursor-pointer"
 >
   {pad.name}
-</div>
+</button>

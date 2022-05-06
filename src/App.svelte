@@ -5,9 +5,9 @@
   import Pad from "./lib/components/Pad.svelte";
 </script>
 
-<div class="flex flex-col min-h-screen">
+<div class="flex flex-col min-h-screen bg-raisin-black">
   <Header />
-  <main class="bg-red-50 flex-1">
+  <main class="flex-1">
     <div class="wrapper">
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-2">
         {#each audios as pad}
