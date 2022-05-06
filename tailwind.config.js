@@ -3,7 +3,9 @@ module.exports = {
   content: ["./src/**/*.{html,js,svelte,ts}"],
   theme: {
     extend: {
-      fontFamily: ["Creepster", "cursive"],
+      fontFamily: {
+        sans: ["Righteous", "cursive"],
+      },
     },
   },
   plugins: [],
