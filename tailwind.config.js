@@ -6,6 +6,11 @@ module.exports = {
       fontFamily: {
         sans: ["Righteous", "cursive"],
       },
+      colors: {
+        "rose-madder": "#df2935",
+        "yellow-orange": "#ffb140",
+        "raisin-black": "#181d27",
+      },
     },
   },
   plugins: [],
