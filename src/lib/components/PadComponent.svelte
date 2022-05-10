@@ -23,8 +23,9 @@
 			);
 		}
 	}}
-	class={`transition-all h-48 bg-gradient-to-r from-rose-madder to-yellow-orange text-white font-black rounded-md hover:shadow-xl hover:z-10 shadow-red-500 grid place-items-center uppercase cursor-pointer ${
-		isPlaying ? 'cursor-default' : 'active:shadow-xl active:translate-y-1 active:scale-95'
+	style:background-color={pad.color}
+	class={`transition-all h-48 font-black rounded-md grid place-items-center uppercase cursor-pointer border-[3.5px] border-black text-lg ${
+		isPlaying ? 'cursor-default' : 'active:translate-y-1 active:scale-95'
 	}`}
 	disabled={isPlaying}
 	audio-source={pad.loc}
