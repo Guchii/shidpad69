@@ -1,10 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@fontsource/righteous': ^4.5.6
+  '@fontsource/fredoka-one': 4.5.7
+  '@fontsource/grandstander': 4.5.7
   '@sveltejs/adapter-auto': next
   '@sveltejs/kit': next
-  '@types/howler': ^2.2.7
+  '@types/howler': 2.2.7
+  '@types/randomcolor': 0.5.6
   '@typescript-eslint/eslint-plugin': 5.10.1
   '@typescript-eslint/parser': 5.10.1
   autoprefixer: 10.4.7
@@ -18,14 +20,15 @@ specifiers:
   prettier-plugin-svelte: 2.5.0
   svelte: 3.44.0
   svelte-check: 2.2.6
-  svelte-meta-tags: ^2.5.5
+  svelte-meta-tags: 2.5.5
   svelte-preprocess: 4.10.1
   tailwindcss: 3.0.24
   tslib: 2.3.1
   typescript: 4.6.2
 
 dependencies:
-  '@fontsource/righteous': 4.5.6
+  '@fontsource/fredoka-one': 4.5.7
+  '@fontsource/grandstander': 4.5.7
   change-case: 4.1.2
   howler: 2.2.3
 
@@ -33,6 +36,7 @@ devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.40
   '@sveltejs/kit': 1.0.0-next.326_svelte@3.44.0
   '@types/howler': 2.2.7
+  '@types/randomcolor': 0.5.6
   '@typescript-eslint/eslint-plugin': 5.10.1_37dhahzvcdept6jn35t2pcxc7a
   '@typescript-eslint/parser': 5.10.1_qfndwjbknwkswbha2khu23tpva
   autoprefixer: 10.4.7_postcss@8.4.13
@@ -69,8 +73,12 @@ packages:
       - supports-color
     dev: true
 
-  /@fontsource/righteous/4.5.6:
-    resolution: {integrity: sha512-apnLtxjtpSIHMGY7XBjsb3qlmjhmnM7BnvxNrMfBeCrfmpceDsvemhesze/VLqpbN14cQ+IjfgvWfj2sEKS8XA==}
+  /@fontsource/fredoka-one/4.5.7:
+    resolution: {integrity: sha512-QnM1foN+zbnQHONNQnddmPwOuO4gjTlEQI0AECzv0i+kjxw5tBgOC8bQrJcP5amFc8YTvvHVHZtaJ1DCEvTmaA==}
+    dev: false
+
+  /@fontsource/grandstander/4.5.7:
+    resolution: {integrity: sha512-pzryc8J4c+m68V7z3iHmpXE37kMc8SqQqmXMZJnOwyoj4SGL5hb6SUDH9GoQ7kc8o1sHhxryf6SqPxZ1D2Li5g==}
     dev: false
 
   /@humanwhocodes/config-array/0.9.5:
@@ -206,6 +214,10 @@ packages:
 
   /@types/pug/2.0.6:
     resolution: {integrity: sha512-SnHmG9wN1UVmagJOnyo/qkk0Z7gejYxOYYmaAwr5u2yFYfsupN3sg10kyzN8Hep/2zbHxCnsumxOoRIRMBwKCg==}
+    dev: true
+
+  /@types/randomcolor/0.5.6:
+    resolution: {integrity: sha512-lKkW8DGUQpZldTrwa+HM5rY+7eTyaHOMTsnj9ewt7AAwXuMPwBmkLlfh8+SXdgOhBW9iNI4x4zRjQ/TQZkdycQ==}
     dev: true
 
   /@types/sass/1.43.1:

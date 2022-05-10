@@ -1,4 +1,5 @@
-@import '@fontsource/righteous';
+@import '@fontsource/grandstander';
+@import '@fontsource/fredoka-one';
 
 @tailwind base;
 @tailwind components;

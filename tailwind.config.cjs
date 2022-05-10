@@ -5,7 +5,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Righteous', ...defaultTheme.fontFamily.sans]
+				sans: ['Fredoka One', ...defaultTheme.fontFamily.sans],
+				cursive: ['Grandstander', 'cursive']
 			},
 			colors: {
 				'rose-madder': '#df2935',
