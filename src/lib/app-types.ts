@@ -1,1 +1,7 @@
-export type TPad = { id: number; loc: string; name: string; oneShot: boolean };
+export type TPad = {
+	id: number;
+	loc: string;
+	color: string;
+	name: string;
+	oneShot: boolean;
+};
