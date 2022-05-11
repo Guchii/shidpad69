@@ -14,10 +14,10 @@
 	<title>ShidPad69</title>
 </svelte:head>
 
-<div class="flex flex-col min-h-screen bg-white">
+<div class="flex flex-col min-h-screen bg-white max-w-5xl mx-auto">
 	<Header />
 	<main class="flex-1">
-		<div class="mx-auto max-w-[1200px]">
+		<div class="mx-auto">
 			<slot />
 		</div>
 	</main>
