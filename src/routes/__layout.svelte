@@ -14,7 +14,7 @@
 	<title>ShidPad69</title>
 </svelte:head>
 
-<div class="flex flex-col min-h-screen">
+<div class="flex flex-col min-h-screen bg-white">
 	<Header />
 	<main class="flex-1">
 		<div class="mx-auto max-w-[1200px]">

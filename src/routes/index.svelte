@@ -11,9 +11,17 @@
 <script lang="ts">
 	import type { TPad } from '$lib/app-types';
 	import PadComponent from '$lib/components/PadComponent.svelte';
+	import { audioSources } from '$lib/stores/audio';
+	import { Howl } from 'howler';
 
 	export let audios: TPad[];
 	export let color: string;
+
+	$audioSources = audios.map((a) => ({
+		audioRef: new Howl({ src: a.loc }),
+		oneShot: a.oneShot,
+		howlerIds: []
+	}));
 </script>
 
 <div class="p-2 space-y-4">
@@ -27,8 +35,8 @@
 		</label>
 	</div>
 	<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-		{#each audios as pad}
-			<PadComponent pad={{ ...pad, color }} />
+		{#each audios as pad, index}
+			<PadComponent pad={{ ...pad, color }} audioIndex={index} />
 		{/each}
 	</div>
 </div>

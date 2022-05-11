@@ -1,33 +1,27 @@
 <script lang="ts">
-	import { currentlyPlayingAudio } from '$lib/stores/audio';
-	import { Howl } from 'howler';
+	import { audioSources } from '$lib/stores/audio';
 	import type { TPad } from '../app-types';
 
 	export let pad: TPad;
+	export let audioIndex: number;
 
-	const sound = new Howl({ src: [pad.loc], volume: 1 });
-
-	let isPlaying = false;
-	$: isPlaying = $currentlyPlayingAudio.includes(pad.id);
+	const sound = $audioSources[audioIndex];
+	const audioRef = sound.audioRef;
+	let disabled = false;
+	$: disabled = !sound.oneShot && sound.howlerIds.length > 0;
 </script>
 
 <button
 	on:click={() => {
-		if (pad.oneShot) sound.play();
-		else if (!isPlaying) {
-			$currentlyPlayingAudio = [...$currentlyPlayingAudio, pad.id];
-			sound.play();
-			sound.on(
-				'end',
-				() => ($currentlyPlayingAudio = $currentlyPlayingAudio.filter((i) => i !== pad.id))
-			);
-		}
+		const id = audioRef.play();
+		sound.howlerIds = [...sound.howlerIds, id];
+		audioRef.on('end', () => (sound.howlerIds = sound.howlerIds.filter((i) => i !== id)));
 	}}
 	style:background-color={pad.color}
 	class={`transition-all h-48 font-black rounded-md grid place-items-center uppercase cursor-pointer border-[3.5px] border-black text-lg ${
-		isPlaying ? 'cursor-default' : 'active:translate-y-1 active:scale-95'
+		disabled ? 'cursor-default' : 'active:translate-y-1 active:scale-95'
 	}`}
-	disabled={isPlaying}
+	{disabled}
 	audio-source={pad.loc}
 >
 	{pad.name}
