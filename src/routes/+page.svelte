@@ -1,23 +1,15 @@
-<script lang="ts" context="module">
-	/** @type {import('./index').Load} */
-	export async function load({ fetch }) {
-		const resp = await (await fetch('/api/audios')).json();
-		const COLOR_PALLETTE = ['#D56F3E', '#247FBC', '#C7EF00'];
-		const randIndex = Math.floor(Math.random() * COLOR_PALLETTE.length);
-		return { props: { audios: resp.audios, color: COLOR_PALLETTE[randIndex] } };
-	}
-</script>
-
 <script lang="ts">
 	import type { TPad } from '$lib/app-types';
 	import PadComponent from '$lib/components/PadComponent.svelte';
 	import { audioSources } from '$lib/stores/audio';
+	import type { PageData } from './$types';
 	import { Howl } from 'howler';
 
-	export let audios: TPad[];
-	export let color: string;
+	export let data: PageData;
 
-	$audioSources = audios.map((a) => ({
+	const { audios, color } = data;
+
+	$audioSources = audios.map((a: TPad) => ({
 		audioRef: new Howl({ src: a.loc }),
 		oneShot: a.oneShot,
 		howlerIds: []
